@@ -1,0 +1,7 @@
+Here is the result: testing path.js, Actually, even nothing has a thing in it, a 'no'
+
+---->>>>
+not added by the script
+will get removed later if you rerun, F
+so async callback is one of the methods for asynchronously functioning, but the other method is promises
+<<<<-----

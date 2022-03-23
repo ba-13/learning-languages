@@ -1,0 +1,19 @@
+{
+  "name": "external-dependencies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "npm-intro.js",
+  "scripts": {
+    "start": "node app.js",
+    "devStart": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

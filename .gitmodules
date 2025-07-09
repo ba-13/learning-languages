@@ -1,0 +1,3 @@
+[submodule "cpp/learncpp/chapter03/spdlog"]
+	path = cpp/learncpp/chapter03/spdlog
+	url = https://github.com/gabime/spdlog.git

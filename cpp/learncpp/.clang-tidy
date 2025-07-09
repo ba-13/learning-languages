@@ -1,0 +1,7 @@
+Checks: 'clang-diagnostic-*,clang-analyzer-*,cppcoreguidelines-*'
+WarningsAsErrors: true
+FormatStyle: LLVM
+# AnalyzeTemporaryDtors: false
+CheckOptions:
+  - key: cppcoreguidelines-avoid-magic-numbers.IgnoredIntegerValues
+    value: '42'

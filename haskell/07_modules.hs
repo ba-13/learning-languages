@@ -1,7 +1,7 @@
 -- importing puts all library functions available in global namespace
 -- to import in ghci, :m + Data.List Data.Set
 -- imports must be done before defining any functions
-import Data.List (inits, nub, sort, tails)
+import Data.List (group, inits, nub, sort, tails)
 -- we can hide offending functions we don't want to import
 
 -- can import without putting on global namespace
@@ -125,3 +125,14 @@ getOriginal = unlines lines_
 words_ = words "hey these are the words in this sentence"
 
 getOriginal' = unwords words_
+
+nub' :: (Ord a) => [a] -> [a]
+nub' xs = removeDuplicates sorted
+  where
+    sorted = sort xs
+    removeDuplicates = map (\(x : xs) -> x) . group
+
+-- delete removes first occurence of an element
+-- \\ is the difference operator, removes one occurence of right list element from left list
+-- union, intersect
+-- insert is a insertion in order (ascending)

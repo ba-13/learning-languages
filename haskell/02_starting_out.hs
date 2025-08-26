@@ -49,7 +49,9 @@ range20'2 = [2, 4 .. 20]
 
 range21'2 = [2, 4 .. 21] -- not that strict
 
-lazyRange = take 24 [13, 26 ..] -- an infinite list, but since haskell is lazy, it will wait to check what to do of this list and do things accordingly.
+lazyRange = take 24 [13, 26 ..]
+
+-- an infinite list, but since haskell is lazy, it will wait to check what to do of this list and do things accordingly.
 
 -- cycle : cycles the arr to make an infinite list
 -- repeat : similar to cycle but for single element.
@@ -68,6 +70,13 @@ verbs = ["eats", "fights", "jumps"]
 -- list comprehension
 nounMitVerb = [n ++ " " ++ v | n <- nouns, v <- verbs]
 
-rightTriangles' sideLength perimeter = [(a, b, c) | a <- [1 .. sideLength], b <- [1 .. a], c <- [1 .. b], a * a == b * b + c * c, a + b + c == perimeter]
+rightTriangles' sideLength perimeter =
+  [ (a, b, c)
+    | a <- [1 .. sideLength],
+      b <- [1 .. a],
+      c <- [1 .. b],
+      a * a == b * b + c * c,
+      a + b + c == perimeter
+  ]
 
 -- This is a common pattern in functional programming. You take a starting set of solutions and then you apply transformations to those solutions and filter them until you get the right ones.
